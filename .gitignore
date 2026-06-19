@@ -7,10 +7,5 @@
 # Node.js
 node_modules/
 
-# Project
-wallpapers/raw/*.jpg
-wallpapers/raw/*.png
-wallpapers/ups/*.png
-
 # Vscode
 .vscode/
