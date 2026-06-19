@@ -1,9 +1,8 @@
-# <code>NODPAPER</code>
+# NODPAPER
 
 <p><img src=".assets/asset-01.png" align="center" width="100%"></p>
 
-Description goes here.
-
+Curated collection of ultra high quality wallpapers crafted for Node.js enthusiasts. Featuring vibrant greens and stunning visuals inspired by server-side development and the growing ecosystem around it.
 ## Wallpaper Collection
 
 <!-- START_BLOCK -->
