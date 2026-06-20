@@ -8,8 +8,8 @@ ALL=("$SRC"/thumbnail-node*.avif)
 MAX=${#ALL[@]}
 TXT=""
 for NUM in "${!ALL[@]}"; do
-	ALN=$( [ "$NUM" -lt $(( MAX - (MAX % 3 == 0 ? 3 : MAX % 3) )) ] && echo ' align="center"' || echo '' )
-	TXT="${TXT}<a href=\"wallpapers/$(basename "${ALL[$NUM]}" | sed "s/^thumbnail-//")\"><img src=\".assets/$(basename "${ALL[$NUM]}")\"${ALN} width=\"33.3333333333%\"></a>"
+	ALN=$( [ "$NUM" -lt $(( MAX - (MAX % 4 == 0 ? 4 : MAX % 4) )) ] && echo ' align="center"' || echo '' )
+	TXT="${TXT}<a href=\"wallpapers/$(basename "${ALL[$NUM]}" | sed "s/^thumbnail-//")\"><img src=\".assets/$(basename "${ALL[$NUM]}")\"${ALN} width=\"25%\"></a>"
 done
 awk -v BLK="<p>${TXT}</p>" '
 	/<!-- START_NODE -->/ { print; print BLK; skip=1; next }
@@ -21,8 +21,8 @@ ALL=("$SRC"/thumbnail-python*.avif)
 MAX=${#ALL[@]}
 TXT=""
 for NUM in "${!ALL[@]}"; do
-	ALN=$( [ "$NUM" -lt $(( MAX - (MAX % 3 == 0 ? 3 : MAX % 3) )) ] && echo ' align="center"' || echo '' )
-	TXT="${TXT}<a href=\"wallpapers/$(basename "${ALL[$NUM]}" | sed "s/^thumbnail-//")\"><img src=\".assets/$(basename "${ALL[$NUM]}")\"${ALN} width=\"33.3333333333%\"></a>"
+	ALN=$( [ "$NUM" -lt $(( MAX - (MAX % 4 == 0 ? 4 : MAX % 4) )) ] && echo ' align="center"' || echo '' )
+	TXT="${TXT}<a href=\"wallpapers/$(basename "${ALL[$NUM]}" | sed "s/^thumbnail-//")\"><img src=\".assets/$(basename "${ALL[$NUM]}")\"${ALN} width=\"25%\"></a>"
 done
 awk -v BLK="<p>${TXT}</p>" '
 	/<!-- START_PYTHON -->/ { print; print BLK; skip=1; next }
