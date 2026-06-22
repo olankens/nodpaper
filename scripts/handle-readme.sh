@@ -10,8 +10,8 @@ ALL=("$SRC"/thumbnail-java*.avif)
 MAX=${#ALL[@]}
 TXT=""
 for NUM in "${!ALL[@]}"; do
-	ALN=$( [ "$NUM" -lt $(( MAX - (MAX % 6 == 0 ? 6 : MAX % 6) )) ] && echo ' align="center"' || echo '' )
-	TXT="${TXT}<a href=\"source/$(basename "${ALL[$NUM]}" | sed "s/^thumbnail-//")\"><img src=\".assets/$(basename "${ALL[$NUM]}")\"${ALN} width=\"16.6666666667%\"></a>"
+	ALN=$( [ "$NUM" -lt $(( MAX - (MAX % 2 == 0 ? 2 : MAX % 2) )) ] && echo ' align="center"' || echo '' )
+	TXT="${TXT}<a href=\"source/$(basename "${ALL[$NUM]}" | sed "s/^thumbnail-//")\"><img src=\".assets/$(basename "${ALL[$NUM]}")\"${ALN} width=\"50%\"></a>"
 done
 awk -v BLK="<p>${TXT}</p>" '
 	/<!-- START_JAVA -->/ { print; print BLK; skip=1; next }
@@ -23,8 +23,8 @@ ALL=("$SRC"/thumbnail-node*.avif)
 MAX=${#ALL[@]}
 TXT=""
 for NUM in "${!ALL[@]}"; do
-	ALN=$( [ "$NUM" -lt $(( MAX - (MAX % 6 == 0 ? 6 : MAX % 6) )) ] && echo ' align="center"' || echo '' )
-	TXT="${TXT}<a href=\"source/$(basename "${ALL[$NUM]}" | sed "s/^thumbnail-//")\"><img src=\".assets/$(basename "${ALL[$NUM]}")\"${ALN} width=\"16.6666666667%\"></a>"
+	ALN=$( [ "$NUM" -lt $(( MAX - (MAX % 2 == 0 ? 2 : MAX % 2) )) ] && echo ' align="center"' || echo '' )
+	TXT="${TXT}<a href=\"source/$(basename "${ALL[$NUM]}" | sed "s/^thumbnail-//")\"><img src=\".assets/$(basename "${ALL[$NUM]}")\"${ALN} width=\"50%\"></a>"
 done
 awk -v BLK="<p>${TXT}</p>" '
 	/<!-- START_NODE -->/ { print; print BLK; skip=1; next }
@@ -36,8 +36,8 @@ ALL=("$SRC"/thumbnail-python*.avif)
 MAX=${#ALL[@]}
 TXT=""
 for NUM in "${!ALL[@]}"; do
-	ALN=$( [ "$NUM" -lt $(( MAX - (MAX % 6 == 0 ? 6 : MAX % 6) )) ] && echo ' align="center"' || echo '' )
-	TXT="${TXT}<a href=\"source/$(basename "${ALL[$NUM]}" | sed "s/^thumbnail-//")\"><img src=\".assets/$(basename "${ALL[$NUM]}")\"${ALN} width=\"16.6666666667%\"></a>"
+	ALN=$( [ "$NUM" -lt $(( MAX - (MAX % 2 == 0 ? 2 : MAX % 2) )) ] && echo ' align="center"' || echo '' )
+	TXT="${TXT}<a href=\"source/$(basename "${ALL[$NUM]}" | sed "s/^thumbnail-//")\"><img src=\".assets/$(basename "${ALL[$NUM]}")\"${ALN} width=\"50%\"></a>"
 done
 awk -v BLK="<p>${TXT}</p>" '
 	/<!-- START_PYTHON -->/ { print; print BLK; skip=1; next }
