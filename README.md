@@ -2,7 +2,7 @@
 
 <p><img src=".assets/preview-01.avif" align="center" width="100%"></p>
 
-Wallpapers dedicated to software development enthusiasts featuring images scraped from the AppSignal blog and then carefully upscaled to a much higher resolution using the upscayl-bin executable program.
+Wallpapers for software development enthusiasts, featuring carefully curated, high-quality images from the wider web, upscaled to significantly higher resolutions using the upscayl-bin executable program.
 
 ## Java Wallpapers
 
